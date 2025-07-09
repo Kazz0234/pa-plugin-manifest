@@ -5,8 +5,13 @@
     "version": "1.0.0",
     "description": "Read tasks from Google Sheet"
   },
+  "servers": [
+    {
+      "url": "https://script.google.com/macros/s/AKfycbwFoSSNIbBTXCl3lQLWnfyZHm6dMxox6CbYjcHxuFtRcanBCPy1r70KkpuCIq-7DPnl/exec"
+    }
+  ],
   "paths": {
-    "/exec": {
+    "/": {
       "get": {
         "operationId": "listTasks",
         "parameters": [
