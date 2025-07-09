@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "PA Task List",
+  "name_for_model": "pa_tasks",
+  "description_for_human": "Read and filter my personal assistant task list.",
+  "description_for_model": "Plugin for querying and filtering my Google Sheet tasks.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://your-domain.com/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://your-domain.com/logo.png",
+  "contact_email": "you@your-domain.com",
+  "legal_info_url": "https://your-domain.com/legal"
+}
