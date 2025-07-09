@@ -1,0 +1,65 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "PA Task List API",
+    "version": "1.0.0",
+    "description": "Read tasks from Google Sheet"
+  },
+  "paths": {
+    "/exec": {
+      "get": {
+        "operationId": "listTasks",
+        "parameters": [
+          {
+            "name": "due",
+            "in": "query",
+            "schema": { "type": "string", "format": "date" },
+            "required": false,
+            "description": "Filter tasks by due date (YYYY-MM-DD)"
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": { "type": "string" },
+            "required": false,
+            "description": "Filter tasks by status (e.g. Open)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of tasks",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Task" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Task": {
+        "type": "object",
+        "properties": {
+          "id":         { "type": "string" },
+          "startDate":  { "type": "string", "format": "date" },
+          "dueDate":    { "type": "string", "format": "date" },
+          "name":       { "type": "string" },
+          "type":       { "type": "string" },
+          "recurrence": { "type": "string" },
+          "priority":   { "type": "string" },
+          "status":     { "type": "string" },
+          "workDays":   { "type": "number" },
+          "importance": { "type": "string" },
+          "links":      { "type": "string" },
+          "notes":      { "type": "string" }
+        }
+      }
+    }
+  }
+}
