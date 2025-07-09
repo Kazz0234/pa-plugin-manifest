@@ -9,10 +9,10 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://your-domain.com/openapi.json",
+    "url": "https://kazz0234.github.io/pa-plugin-manifest/openapi.json",
     "is_user_authenticated": false
   },
-  "logo_url": "https://your-domain.com/logo.png",
+  "logo_url": "https://raw.githubusercontent.com/Kazz0234/pa-plugin-manifest/main/logo.png",
   "contact_email": "you@your-domain.com",
   "legal_info_url": "https://your-domain.com/legal"
 }
